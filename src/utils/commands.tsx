@@ -1,14 +1,4 @@
 import type { ReactNode, Dispatch, SetStateAction } from "react";
-import {
-  FaCode,
-  FaFire,
-  FaGithub,
-  FaGlobe,
-  FaLightbulb,
-  FaNpm,
-  FaRocket,
-} from "react-icons/fa";
-
 interface CommandItem {
   command: string;
   output: ReactNode;
@@ -60,137 +50,20 @@ const HELP_COMMANDS = [
 
 const PROJECTS = [
   {
-    name: "Flux Mail 🦀",
-    desc: "A temp mail service with self-made SMTP server in Rust",
-    link: "https://flux-mail.shubh.sh",
-    github: "https://github.com/shubhexists/flux-mail",
-    crate: "https://crates.io/crates/flux-mail",
+    name: "White Pad",
+    desc: "Collaboarative real-time drawing app",
+    link: "https://white-pad.vercel.app",
+    github: "https://github.com/vkk-rawat/WhitePad",
   },
   {
-    name: "Ved Analytics",
-    desc: "Privacy-focused website analytics platform",
-    link: "https://vedanalytics.in",
+    name: "Spaces",
+    desc: "A minimalistic real-time chatting app",
+    github: "https://github.com/vkk-rawat/Spaces",
   },
   {
-    name: "RDS 🦀",
-    desc: "Discord music bot written in Rust and Serenity",
-    github: "https://github.com/shubhexists/rds",
-  },
-  {
-    name: "Vanish 🦀",
-    desc: "Tool for locally trusted X.509 dev certificates (MKCERT alternative)",
-    github: "https://github.com/shubhexists/vanish",
-  },
-  {
-    name: "term_ansi 🦀",
-    desc: "Rust macros for ANSI color coding in terminal",
-    github: "https://github.com/shubhexists/term_ansi",
-    crate: "https://crates.io/crates/term_ansi",
-  },
-  {
-    name: "mlvm 🦀",
-    desc: "Symlink-based nvm alternative written in Rust",
-    github: "https://github.com/shubhexists/mlvm",
-    crate: "https://crates.io/crates/mlvm",
-  },
-  {
-    name: "Prism",
-    desc: "Minimalist ExpressJS replica in TypeScript",
-    github: "https://github.com/shubhexists/prism",
-  },
-  {
-    name: "React Maps",
-    desc: "Lightweight React map components (170k+ downloads)",
-    github: "https://github.com/shubhexists/react-maps",
-    npm: "https://www.npmjs.com/org/react-map",
-  },
-  {
-    name: "Vault 🦀",
-    desc: "Simplified version control system in Rust",
-    github: "https://github.com/shubhexists/vault",
-    crate: "https://crates.io/crates/vault",
-  },
-  {
-    name: "libaddress",
-    desc: "Multi-country address handling library",
-    github: "https://github.com/shubhexists/libaddress",
-    npm: "https://www.npmjs.com/package/libaddress",
-  },
-];
-
-const EXPERIENCE = [
-  {
-    company: "Blazeswap",
-    role: "Blockchain Engineer",
-    location: "Remote, India",
-    date: "Dec 2024 - Jul 2025",
-    description: "Developed DEX on XION and blockchain products",
-    achievements: [
-      "Built Swap on XION using CosmWasm contracts",
-      "Created Uniswap router contract deployed on Base Mainnet",
-      "Achieved $100k+ swap volume in under 4 days",
-    ],
-    Icon: FaCode,
-  },
-  {
-    company: "Dardoc",
-    role: "Senior Engineer",
-    location: "Remote, UAE",
-    date: "Jan 2025 - Jul 2025",
-    description: "Admin Panel and scalable backend APIs",
-    achievements: [
-      "Migrated from Azure Cognitive Search to Typesense",
-      "Rebuilt admin panel from scratch",
-    ],
-    Icon: FaCode,
-  },
-  {
-    company: "Tezda Inc",
-    role: "Senior Backend Developer",
-    location: "Remote, UK",
-    date: "April 2024 - Jul 2025",
-    description: "Advanced backend systems and RTC stack",
-    achievements: [
-      "Built RTC stack using Livekit on Kubernetes",
-      "Developed notification backend with FCM",
-    ],
-    Icon: FaCode,
-  },
-  {
-    company: "INDOTABI TOURS",
-    role: "Full Stack Developer",
-    location: "Delhi, India",
-    date: "Sept 2022 - April 2024",
-    description: "Japanese-language mobile-centric website",
-    achievements: [
-      "NextJS frontend + ExpressJS backend",
-      "Launched indotabi.com",
-    ],
-    Icon: FaFire,
-  },
-  {
-    company: "Zoomtod",
-    role: "Product Developer",
-    location: "Remote, US",
-    date: "Jan 2022 - Sept 2022",
-    description: "Voice-only WebRTC application",
-    achievements: [
-      "Flutter app on Play Store",
-      "500+ users with 100+ daily active",
-    ],
-    Icon: FaRocket,
-  },
-  {
-    company: "Vitalth Pvt. Ltd.",
-    role: "Backend Developer",
-    location: "Delhi, India",
-    date: "Dec 2022 - Mar 2023",
-    description: "UHI (Unified Health Interface) implementation",
-    achievements: [
-      "Implemented Govt. of India's UHI architecture",
-      "Completed M1 and M2 onboarding phases",
-    ],
-    Icon: FaLightbulb,
+    name: "Terminal Portfolio Website",
+    desc: "My personal portfolio website in terminal style",
+    github: "https://github.com/vkk-rawat/portfolio"
   },
 ];
 
@@ -303,8 +176,8 @@ export const getOutput = (
     /'\\_   _/\`\\     Theme: GitHub Dark
     \\___)=(___/     Terminal: Web Browser
 
-                    Contact: shubh622005@gmail.com
-                    GitHub: github.com/shubhexists`}
+                    Contact: vickyrawat5998@gmail.com
+                    GitHub: github.com/vkk-rawat`}
         </pre>
       );
 
@@ -328,16 +201,7 @@ export const getOutput = (
         <div className="space-y-3 max-w-2xl">
           <p>Hey there! Thanks for your interest in getting to know me better.</p>
           <p>
-            I'm <Heading>Vivek Rawat</Heading>, 20, currently a Senior Backend Engineer at{" "}
-            <Link href="https://www.dardoc.com">Dardoc</Link>.
-          </p>
-          <p>
-            I'm a huge <Heading>Linux enthusiast</Heading> and absolutely love working in the{" "}
-            <Heading>terminal</Heading>. My setup is minimalist — just my terminal, IDE, and browser!
-          </p>
-          <p>
-            I'm passionate about building things and always eager to learn. When I'm not coding,
-            you'll probably find me jamming to Bollywood tunes. <Heading>Indian music for the win!</Heading> 🎵
+            I'm <Heading>Vivek Rawat</Heading>, 22. A passionate backend engineer.
           </p>
         </div>
       );
@@ -349,11 +213,10 @@ export const getOutput = (
           <p>Here's where you can find me online:</p>
           <div className="space-y-1">
             {[
-              { label: "GitHub", url: "https://github.com/shubhexists", text: "shubhexists" },
-              { label: "X", url: "https://x.com/shubh_exists", text: "shubh_exists" },
-              { label: "LinkedIn", url: "https://www.linkedin.com/in/shubhexists/", text: "Vivek Rawat" },
-              { label: "Email", url: "mailto:shubh622005@gmail.com", text: "shubh622005@gmail.com" },
-              { label: "Stack", url: "https://stackoverflow.com/users/21094470/shubham-singh", text: "stackoverflow.com/..." },
+              { label: "GitHub", url: "https://github.com/vkk-rawat", text: "vkk-rawat" },
+              { label: "X", url: "https://x.com/its_vicky2603", text: "its_vicky2603" },
+              { label: "LinkedIn", url: "https://www.linkedin.com/in/vivek-rawat-8ba714260/", text: "Vivek Rawat" },
+              { label: "Email", url: "mailto:vickyrawat5998@gmail.com", text: "vickyrawat5998@gmail.com" },
             ].map(({ label, url, text }) => (
               <div key={label} className="flex">
                 <Heading>{label.padEnd(10)}</Heading>
@@ -369,11 +232,9 @@ export const getOutput = (
       return (
         <div className="space-y-3">
           {[
-            { title: "Languages", items: "TypeScript, Rust, JavaScript, Python, Go, Dart, C, Java" },
-            { title: "Frameworks", items: "React/NextJS, Express, Flutter, Actix Web, Rocket, Flask" },
-            { title: "Blockchain", items: "Solana, Anchor, CosmWasm" },
-            { title: "Tools", items: "Docker, Git, Prometheus, Grafana, Redis, Kafka, PostgreSQL, MongoDB" },
-            { title: "DevOps", items: "Nginx, AWS (EC2, ECS, EKS, Lambda, S3, CloudWatch), Kubernetes" },
+            { title: "Languages", items: "TypeScript, JavaScript,Java" },
+            { title: "Frameworks", items: "React/NextJS, Express" },
+            { title: "Tools", items: "Git,Kafka,PostgreSQL, MongoDB,SQL" },
           ].map(({ title, items }) => (
             <div key={title}>
               <Heading>{title}:</Heading>
@@ -394,69 +255,12 @@ export const getOutput = (
                   <p className="text-terminal-muted text-sm mt-1">{project.desc}</p>
                 </div>
                 <div className="flex gap-2 flex-shrink-0">
-                  {project.crate && (
-                    <a href={project.crate} target="_blank" rel="noopener noreferrer" title="Crates.io">
-                      <img src="/cargo.png" alt="Cargo" className="w-5 h-5" />
-                    </a>
-                  )}
-                  {project.github && (
-                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="text-terminal-link">
-                      <FaGithub size={20} />
-                    </a>
-                  )}
-                  {project.npm && (
-                    <a href={project.npm} target="_blank" rel="noopener noreferrer" className="text-red-500">
-                      <FaNpm size={20} />
-                    </a>
-                  )}
-                  {project.link && (
-                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-terminal-link">
-                      <FaGlobe size={20} />
-                    </a>
-                  )}
                 </div>
               </div>
             </div>
           ))}
         </div>
       );
-
-    case "experience":
-      return (
-        <div className="space-y-6 mt-2">
-          {EXPERIENCE.map((job, i) => (
-            <div
-              key={i}
-              className="relative border border-terminal-border rounded-lg p-5 bg-gradient-to-r from-[#1a1b26] to-[#24283b]"
-            >
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 text-terminal-accent text-3xl">
-                  <job.Icon />
-                </div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex justify-between items-start flex-wrap gap-2">
-                    <h3 className="text-terminal-accent text-lg font-bold">{job.company}</h3>
-                    <span className="text-terminal-muted text-sm">{job.date}</span>
-                  </div>
-                  <p className="text-terminal-link font-semibold">{job.role}</p>
-                  <p className="text-terminal-muted text-sm">{job.location}</p>
-                  <p className="text-terminal-muted mt-2">{job.description}</p>
-                  <ul className="mt-3 space-y-1">
-                    {job.achievements.map((a, j) => (
-                      <li key={j} className="flex items-start gap-2">
-                        <span className="text-terminal-accent">▹</span>
-                        <span className="text-terminal-muted">{a}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-              <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-terminal-accent to-terminal-error rounded-b-lg" />
-            </div>
-          ))}
-        </div>
-      );
-
     case "goals":
       return (
         <div className="space-y-3 max-w-2xl">
