@@ -1,1 +1,1 @@
-{"root":["./src/app.tsx","./src/index.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/command-area.tsx","./src/components/header.tsx","./src/components/terminal.tsx","./src/utils/commands.tsx","./src/utils/keybindings.tsx"],"version":"5.7.3"}
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/command-area.tsx","./src/components/header.tsx","./src/components/terminal.tsx","./src/utils/commands.tsx","./src/utils/keybindings.tsx"],"version":"5.7.3"}
