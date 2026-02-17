@@ -151,11 +151,11 @@ export const getOutput = (
       );
 
     case "blogs":
-      window.open("https://blog.shubh.sh", "_blank");
+      window.open("https://github.com/vkk-rawat/vivek.blog", "_blank");
       return <Muted>Opening blogs in a new tab...</Muted>;
 
     case "resume":
-      window.open("https://shubh.sh/resume.pdf", "_blank");
+      window.open("/resume.pdf", "_blank");
       return <Muted>Opening resume in a new tab...</Muted>;
 
     case "clear":
