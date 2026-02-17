@@ -151,7 +151,7 @@ export const getOutput = (
       );
 
     case "blogs":
-      window.open("https://github.com/vkk-rawat/vivek.blog", "_blank");
+      window.open("/blog", "_blank");
       return <Muted>Opening blogs in a new tab...</Muted>;
 
     case "resume":
