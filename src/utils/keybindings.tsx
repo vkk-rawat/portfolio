@@ -1,4 +1,5 @@
 import { getOutput } from "./commands";
+import { analytics } from "./analytics";
 import type { ReactNode, KeyboardEvent, Dispatch, SetStateAction } from "react";
 
 interface CommandItem {
@@ -74,9 +75,12 @@ export const keybindings = (
     e.preventDefault();
     const trimmed = currentCommand.trim();
     if (trimmed) {
+      const output = getOutput(trimmed, setCommand);
+      const isValid = !(typeof output === 'object' && output !== null && 'props' in output && (output as any).props?.children?.[0]?.props?.className?.includes('terminal-error'));
+      analytics.trackCommand(trimmed, isValid);
       setCommand((prev) => [
         ...prev,
-        { command: trimmed, output: getOutput(trimmed, setCommand) },
+        { command: trimmed, output },
       ]);
     } else {
       setCommand((prev) => [...prev, { command: "", output: "" }]);
